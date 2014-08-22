@@ -176,7 +176,7 @@ enum ZoneFlags
 	ZF_ATTACK_SAME_NATION	= (1 << 3),
 	ZF_FRIENDLY_NPCS		= (1 << 4),
 	ZF_WAR_ZONE				= (1 << 5),
-	ZF_CLAN_UPDATE			= (1 << 6)  // Joining, disbanding, etc. NOT creating.
+	ZF_CLAN_UPDATE			= (1 << 6)  // Joining, disbanding, creating etc.
 };
 
 // ITEM_SLOT DEFINE
@@ -324,7 +324,6 @@ enum StatType
 	STAT_COUNT
 };
 
-
 enum AttackResult
 {
 	ATTACK_FAIL					= 0,
@@ -344,28 +343,8 @@ enum InvisibilityType
 	INVIS_DISPEL_ON_ATTACK	= 2
 };
 
-INLINE int myrand( int min, int max )
-{
-	if( min == max ) return min;
-	if( min > max )
-	{
-		int temp = min;
-		min = max;
-		max = temp;
-	}
-
-	double gap = max - min + 1;
-	double rrr = (double)RAND_MAX / gap;
-
-	double rand_result;
-
-	rand_result = (double)rand() / rrr;
-
-	if( (int)( min + (int)rand_result ) < min ) return min;
-	if( (int)( min + (int)rand_result ) > max ) return max;
-
-	return (int)( min + (int)rand_result );
-};
+int32 myrand(int32 min, int32 max);
+uint64 RandUInt64();
 
 INLINE bool CheckPercent(short percent)
 {

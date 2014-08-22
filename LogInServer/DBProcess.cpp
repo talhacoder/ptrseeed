@@ -19,7 +19,7 @@ bool CDBProcess::LoadVersionList()
 	if (dbCommand.get() == nullptr)
 		return false;
 
-	if (!dbCommand->Execute(_T("SELECT sVersion, sHistoryVersion, strFileName FROM VERSION")))
+	if (!dbCommand->Execute(_T("SELECT Version, HisVersion, FileName FROM VERSION")))
 	{
 		g_pMain->ReportSQLError(m_dbConnection.GetError());
 		return false;

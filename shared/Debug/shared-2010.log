@@ -1,0 +1,70 @@
+﻿Build started 5/14/2014 9:39:46 PM.
+     1>Project "C:\Users\Hero\Desktop\snoxd-koserver-master\src\shared\shared-2010.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WIN32 /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\shared.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WIN32 /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\shared.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CircularBuffer.cpp Condition.cpp DebugUtils.cpp Ini.cpp JvCryption.cpp KOSocket.cpp Mutex.cpp RWLock.cpp ReferenceObject.cpp SMDFile.cpp Socket.cpp SocketMgr.cpp SocketMgrWin32.cpp SocketOpsWin32.cpp SocketWin32.cpp TimeThread.cpp crc32.cpp database\OdbcCommand.cpp database\OdbcConnection.cpp database\OdbcParameter.cpp database\OdbcRecordset.cpp lzf.cpp
+         lzf.cpp
+         OdbcRecordset.cpp
+         OdbcParameter.cpp
+         OdbcConnection.cpp
+         OdbcCommand.cpp
+         crc32.cpp
+         TimeThread.cpp
+         SocketWin32.cpp
+         SocketOpsWin32.cpp
+         SocketMgrWin32.cpp
+         SocketMgr.cpp
+         Socket.cpp
+         SMDFile.cpp
+         ReferenceObject.cpp
+         RWLock.cpp
+         Mutex.cpp
+         KOSocket.cpp
+         JvCryption.cpp
+         Ini.cpp
+         DebugUtils.cpp
+         Generating Code...
+         Compiling...
+         Condition.cpp
+         CircularBuffer.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WIN32 /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Thread.cpp globals.cpp signal_handler.cpp
+         signal_handler.cpp
+         globals.cpp
+         Thread.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Users\Hero\Desktop\snoxd-koserver-master\src\..\bin\Debug\shared.lib" /NOLOGO Debug\CircularBuffer.obj
+         Debug\Condition.obj
+         Debug\crc32.obj
+         Debug\OdbcCommand.obj
+         Debug\OdbcConnection.obj
+         Debug\OdbcParameter.obj
+         Debug\OdbcRecordset.obj
+         Debug\DebugUtils.obj
+         Debug\globals.obj
+         Debug\Ini.obj
+         Debug\JvCryption.obj
+         Debug\KOSocket.obj
+         Debug\lzf.obj
+         Debug\Mutex.obj
+         Debug\ReferenceObject.obj
+         Debug\RWLock.obj
+         Debug\signal_handler.obj
+         Debug\SMDFile.obj
+         Debug\Socket.obj
+         Debug\SocketMgr.obj
+         Debug\SocketMgrWin32.obj
+         Debug\SocketOpsWin32.obj
+         Debug\SocketWin32.obj
+         Debug\stdafx.obj
+         Debug\Thread.obj
+         Debug\TimeThread.obj
+         Debug\tstring.obj
+         shared-2010.vcxproj -> C:\Users\Hero\Desktop\snoxd-koserver-master\src\..\bin\Debug\shared.lib
+     1>Done Building Project "C:\Users\Hero\Desktop\snoxd-koserver-master\src\shared\shared-2010.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:18.82

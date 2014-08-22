@@ -27,7 +27,7 @@ public:
 
 	~LoginServer();
 
-	KOSocketMgr<LoginSession> m_socketMgr;
+	KOSocketMgr<LoginSession> m_socketMgr[10];
 
 private:
 	void UpdateServerList();

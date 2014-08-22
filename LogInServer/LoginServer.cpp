@@ -36,13 +36,14 @@ bool LoginServer::Startup()
 	printf("Latest version in database: %d\n", GetVersion());
 	InitPacketHandlers();
 
-	if (!m_socketMgr.Listen(_LISTEN_PORT, MAX_USER))
+	for(int i=0; i<10 ; i++)
+	if (!m_socketMgr[i].Listen(_LISTEN_PORT+i, MAX_USER))
 	{
 		printf("ERROR: Failed to listen on server port.\n");
 		return false;
 	}
-
-	m_socketMgr.RunServer();
+	for(int i=0; i<10 ; i++)
+	m_socketMgr[i].RunServer();
 	g_timerThreads.push_back(new Thread(Timer_UpdateUserCount));
 	return true;
 }
@@ -70,18 +71,21 @@ void LoginServer::UpdateServerList()
 
 	FastGuard lock(m_serverListLock);
 	Packet & result = m_serverListPacket;
-
+	
 	result.clear();
+
 	result << uint8(m_ServerList.size());
+	
 	foreach (itr, m_ServerList) 
 	{		
 		_SERVER_INFO *pServer = *itr;
-
-		result << pServer->strServerIP;
-#if __VERSION >= 1888
+		#if __VERSION >= 1888
 		result << pServer->strLanIP;
-#endif
+		#endif		
+		result << pServer->strServerIP;
 		result << pServer->strServerName;
+
+
 
 		if (pServer->sUserCount <= pServer->sPlayerCap)
 			result << pServer->sUserCount;
@@ -101,6 +105,7 @@ void LoginServer::UpdateServerList()
 		result	<< pServer->strKarusKingName << pServer->strKarusNotice 
 				<< pServer->strElMoradKingName << pServer->strElMoradNotice;
 #endif
+		
 	}
 }
 
@@ -248,6 +253,7 @@ LoginServer::~LoginServer()
 		fclose(m_fp);
 
 	printf("Shutting down socket system...");
-	m_socketMgr.Shutdown();
+	for(int i=0; i<10 ; i++)
+	m_socketMgr[i].Shutdown();
 	printf(" done.\n");
 }
