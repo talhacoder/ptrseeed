@@ -4,7 +4,7 @@
 
 #include "Define.h"
 #include "DBProcess.h"
-#include "LoginServer.h"
-#include "LoginSession.h"
+#include "VersionManager.h"
+#include "VersionManagerDlg.h"
 
 using namespace std;

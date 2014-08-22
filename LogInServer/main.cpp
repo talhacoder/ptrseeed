@@ -9,7 +9,7 @@ BOOL WINAPI _ConsoleHandler(DWORD dwCtrlType);
 
 int main()
 {
-	SetConsoleTitle("LogIn Server ilyas68 for Knight Online v" STRINGIFY(__VERSION));
+	SetConsoleTitle("LogIn Server for Knight Online v" STRINGIFY(__VERSION));
 
 	// Override the console handler
 	SetConsoleCtrlHandler(_ConsoleHandler, TRUE);
